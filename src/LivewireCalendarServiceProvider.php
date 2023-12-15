@@ -2,7 +2,6 @@
 
 namespace ACTTraining\LivewireCalendar;
 
-use ACTTraining\LivewireCalendar\Commands\LivewireCalendarCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,9 +16,7 @@ class LivewireCalendarServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('livewire-calendar')
-            ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_livewire-calendar_table')
-            ->hasCommand(LivewireCalendarCommand::class);
+            ->hasConfigFile();
     }
 }
