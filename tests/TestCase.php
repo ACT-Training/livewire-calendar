@@ -2,9 +2,9 @@
 
 namespace ACTTraining\LivewireCalendar\Tests;
 
+use ACTTraining\LivewireCalendar\LivewireCalendarServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ACTTraining\LivewireCalendar\LivewireCalendarServiceProvider;
 
 class TestCase extends Orchestra
 {

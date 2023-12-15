@@ -2,9 +2,9 @@
 
 namespace ACTTraining\LivewireCalendar;
 
+use ACTTraining\LivewireCalendar\Commands\LivewireCalendarCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ACTTraining\LivewireCalendar\Commands\LivewireCalendarCommand;
 
 class LivewireCalendarServiceProvider extends PackageServiceProvider
 {
