@@ -2,8 +2,10 @@
 
 namespace ACTTraining\LivewireCalendar\Tests;
 
+use ACTTraining\LivewireCalendar\LivewireCalendar;
 use ACTTraining\LivewireCalendar\LivewireCalendarServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Livewire\Livewire;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -15,16 +17,19 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'ACTTraining\\LivewireCalendar\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+
+        $this->registerLivewireComponents();
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
+            \Livewire\LivewireServiceProvider::class,
             LivewireCalendarServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 
@@ -33,4 +38,10 @@ class TestCase extends Orchestra
         $migration->up();
         */
     }
+
+    protected function registerLivewireComponents(): void
+    {
+        Livewire::component('livewire-calendar', LiveWireCalendar::class);
+    }
+
 }
