@@ -41,5 +41,4 @@ abstract class LivewireCalendar extends Component
     {
         return view('livewire-calendar::calendar');
     }
-
 }

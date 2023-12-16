@@ -4,7 +4,6 @@ namespace ACTTraining\LivewireCalendar\Concerns;
 
 trait WithDateAndTime
 {
-
     protected bool $showWeekends = true;
 
     protected string $slotDuration = '00:30:00';
@@ -88,5 +87,4 @@ trait WithDateAndTime
 
         return $this;
     }
-
 }

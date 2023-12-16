@@ -43,5 +43,4 @@ class TestCase extends Orchestra
     {
         Livewire::component('livewire-calendar', LiveWireCalendar::class);
     }
-
 }

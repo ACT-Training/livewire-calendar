@@ -8,7 +8,6 @@ trait WithEventDisplay
 
     protected bool $displayEventTime = true;
 
-
     public function displayEventEnd(): bool
     {
         return $this->displayEventEnd;
@@ -32,5 +31,4 @@ trait WithEventDisplay
 
         return $this;
     }
-
 }

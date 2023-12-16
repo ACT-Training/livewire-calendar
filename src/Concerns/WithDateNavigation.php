@@ -3,6 +3,7 @@
 namespace ACTTraining\LivewireCalendar\Concerns;
 
 use Carbon\Carbon;
+
 trait WithDateNavigation
 {
     protected ?Carbon $initialDate = null;
@@ -12,13 +13,14 @@ trait WithDateNavigation
         if (is_null($this->initialDate)) {
             return Carbon::now();
         }
+
         return $this->initialDate;
     }
 
     public function setInitialDate($initialDate = null): static
     {
         $this->initialDate = $initialDate;
+
         return $this;
     }
-
 }

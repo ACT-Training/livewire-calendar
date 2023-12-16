@@ -17,5 +17,4 @@ trait WithView
 
         return $this;
     }
-
 }

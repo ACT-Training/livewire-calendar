@@ -8,7 +8,7 @@ trait WithToolbar
 
     protected ?array $footerToolbar = null;
 
-    public function headerToolbar(): array|null
+    public function headerToolbar(): ?array
     {
         return $this->headerToolbar;
     }
@@ -20,7 +20,7 @@ trait WithToolbar
         return $this;
     }
 
-    public function footerToolbar(): array|null
+    public function footerToolbar(): ?array
     {
         return $this->footerToolbar;
     }

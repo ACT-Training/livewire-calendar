@@ -5,6 +5,7 @@ namespace ACTTraining\LivewireCalendar\Concerns;
 trait WithNow
 {
     protected bool $now = true;
+
     protected bool $nowIndicator = false;
 
     public function now(): bool
@@ -30,5 +31,4 @@ trait WithNow
 
         return $this;
     }
-
 }
