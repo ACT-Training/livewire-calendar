@@ -23,7 +23,7 @@ abstract class LivewireCalendar extends Component
     use WithToolbar;
     use WithView;
 
-    abstract public function getEventsProperty(): array;
+    abstract public function events(): array;
 
     abstract public function eventClick($info): void;
 

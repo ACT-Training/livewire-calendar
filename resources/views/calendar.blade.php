@@ -1,7 +1,7 @@
 <div wire:ignore>
     <div x-data="{
         calendar: null,
-        events: @js($this->events),
+        events: @js($this->events()),
         init() {
             this.calendar = new FullCalendar.Calendar(this.$refs.calendar, {
                 events: (info, success) => success(this.events),
