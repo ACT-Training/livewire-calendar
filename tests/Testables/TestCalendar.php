@@ -6,7 +6,7 @@ use ACTTraining\LivewireCalendar\LivewireCalendar;
 
 class TestCalendar extends LivewireCalendar
 {
-    public function getEventsProperty(): array
+    public function events(): array
     {
         return [];
     }
